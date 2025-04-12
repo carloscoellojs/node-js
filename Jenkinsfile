@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Continue and install npm packages') {
             steps {
-                input 'install npm packages? (Click "yes" to continue)'
+                input 'install npm packages? (Click "proceed" to continue or "abort" to cancel)'
             }
         }
         stage('NPM Install') {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Continue and build the application') {
             steps {
-                input 'Build the application? (Click "yes" to continue)'
+                input 'Build the application? (Click "proceed" to continue or "abort" to cancel)'
             }
         }
         stage('Build') {
