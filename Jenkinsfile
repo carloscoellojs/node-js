@@ -3,7 +3,9 @@ pipeline {
 
     stages {
         stage('Git Checkout') {
-            git 'https://github.com/carloscoellojs/node-js'
+            steps {
+                git 'https://github.com/carloscoellojs/node-js'
+            }
         }
     }
 }
