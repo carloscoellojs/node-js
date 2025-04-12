@@ -10,7 +10,7 @@ pipeline {
                 git branch: 'main', credentialsId: 'github-cd', url: 'https://github.com/carloscoellojs/node-js.git'
             }
         }
-        stage('Linting') {
+        stage('Continue and install npm packages') {
             steps {
                 input 'install npm packages? (Click "yes" to continue)'
             }
@@ -20,7 +20,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Linting') {
+        stage('Continue and build the application') {
             steps {
                 input 'Build the application? (Click "yes" to continue)'
             }
