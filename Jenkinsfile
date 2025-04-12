@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: '', credentialsId: 'github-cd', url: 'https://github.com/carloscoellojs/node-js.git'
+                git branch: 'main', credentialsId: 'github-cd', url: 'https://github.com/carloscoellojs/node-js.git'
             }
         }
     }
